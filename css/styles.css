@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  --ff-name: "Karla", sans-serif;
+  --cyan: 179 62% 43%;
+  --bright-yellow: 71 73% 54%;
+  --light-gray: 204 43% 93%;
+  --grayish-blue: 218 22% 67%;
+  --fs-big: 2rem;
+  --fs-normal: 1rem;
+  --fs-small: 0.875rem;
+  --fw-bold: 700;
+  --fw-normal: 400;
+  --fw-light: 200;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-name);
+  color: white;
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-normal);
+  background-color: hsl(var(--light-gray));
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "card-1 card-1"
+    "card-2 card-3";
+  width: 40%;
+
+  overflow: hidden;
+  border-radius: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 12rem;
+}
+h1,
+h3 {
+  padding: 0.75rem 0 0.75rem 0;
+  font-weight: var(--fw-bold);
+}
+.card {
+  padding: 2rem;
+  line-height: 1.5;
+}
+
+.card-1 {
+  grid-area: card-1;
+  background-color: white;
+}
+.card-1 h1 {
+  color: hsl(var(--cyan));
+}
+.card-1 h3 {
+  color: hsl(var(--bright-yellow));
+}
+.card-1 p {
+  color: hsl(var(--grayish-blue));
+}
+
+.card-2 {
+  grid-area: card-2;
+  background-color: hsl(var(--cyan));
+}
+
+#price {
+  font-size: var(--fs-big);
+  font-weight: var(--fw-bold);
+  padding: 5px;
+}
+#grey-text {
+  color: hsl(var(--light-gray) / 0.6);
+}
+.card-2 button {
+  display: inline-block;
+  width: 80%;
+  padding: 1rem;
+  color: white;
+  background-color: hsl(var(--bright-yellow));
+  font-weight: var(--fw-bold);
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid hsl(var(--bright-yellow));
+  margin-top: 2rem;
+}
+.card-3 {
+  grid-area: card-3;
+  background-color: hsl(var(--cyan) / 0.8);
+}
+.card-3 ul {
+  list-style: none;
+  font-weight: var(--fw-light);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-light);
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a {
+  text-decoration: none;
+}
