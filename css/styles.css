@@ -95,8 +95,12 @@ h3 {
   font-weight: var(--fw-bold);
   border-radius: 5px;
   text-decoration: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid hsl(var(--bright-yellow));
+}
+.btn {
+  display: grid;
+  place-items: center;
   margin-top: 2rem;
 }
 .card-3 {
@@ -125,12 +129,16 @@ h3 {
 @media only screen and (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr minmax(min-content, max-content) minmax(
+        min-content,
+        max-content
+      );
     grid-template-areas:
       "card-1"
       "card-2"
       "card-3";
     width: 60%;
+    margin-top: 5rem;
   }
   .card-1 {
     grid-area: card-1;
